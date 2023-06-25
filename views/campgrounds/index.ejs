@@ -1,0 +1,71 @@
+<% layout('layouts/boilerplate') %>
+
+
+    <!-- Button trigger modal -->
+<button type="button" class="btn btn-dark bg-warning bg-gradient mb-2" data-bs-toggle="modal" data-bs-target="#exampleModal">
+  <i class="fa fa-info-circle" style="font-size:20px;color:yellow"></i>
+    About CampSite 
+</button>
+  
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">About CampSite</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p>This is basic website which include C|R|U|D implementation, which means you can Create,Read,Update and Delete. <br> Hope you will like it. <br> <strong>Thank You!</strong></p><hr>
+          <div class="text-warning">
+            <p><b>Instructions:-</b></p>
+            <p>1. You do not have permission to Edit or Delete someone else's campgrounds.</p>
+            <p>2. Also you cannot delete someone else's reviews.</p>
+            <p>3. Please do not use abusive or harmful words.</p>
+            <p>4. Do not use sexual and harmful images.</p>
+            <p>Any of above violation may lead to ban.</p>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+    <div  id="map"></div>
+    <h1 class="m-5 text-center" id="indexH1">Visit CampGrounds &darr;</h1>
+        <!-- <a href="/campgrounds/new"><b>Add new campground</b></a> -->
+    <ul>
+        <% for (let campground of campgrounds) {%>
+            <div class="card mb-3 ">
+                <div class="row">
+                    <div class="col-md-3">
+                        <% if(campground.images.length){ %>
+                           <img crossorigin="anonymous" class="img-fluid" src="<%=campground.images[0].url%>" alt="">
+                        <% } else{%>
+                            <img class="img-fluid" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRSFA_EJEK2oeH6o0W5XCqo7AqqOzyjQTDRqemZ5fFSSe8fNgvzJ9Op7itlWn56_c2BwFNf5J4fuWs&usqp=CAU&ec=48600113" alt="">
+                        <% } %>
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <h5 class="index-h5 card-tittle"><%= campground.tittle %></h5>
+                            <p class="card-text" style="font-family: 'DancingScript', cursive;"><%= campground.description %></p>
+                            <p class="card-text">
+                                <small class="text-muted fa fa-map-marker">  Located at <%= campground.location %></small>
+                            </p>
+                            <a class="btn btn-primary bg-gradient" href="/campgrounds/<%=campground._id%>">View <%= campground.tittle %></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <% } %>  
+    </ul>
+
+<script>
+    const mapToken = '<%-process.env.MAPBOX_TOKEN%>';
+    const  campgrounds = {features: <%-JSON.stringify(campgrounds)%>}
+</script>
+
+<script src="/javascripts/clustermap.js"></script>

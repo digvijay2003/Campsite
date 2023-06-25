@@ -1,0 +1,23 @@
+<nav class="navbar sticky-top navbar-expand-md navbar-dark box-shadow .15s ease-in-out;">
+    <div class="container-fluid">
+      <a class="navbar-brand mx-1" href="#"> <i class='fas fa-campground' style='font-size:25px;color:yellow'></i> CampSite</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse text-center" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+          <a class="nav-link mx-3" aria-current="page" href="/">Home</a>
+          <a class="nav-link mx-3" href="/campgrounds">CampGrounds</a>
+          <a class="nav-link mx-3" href="/campgrounds/new">Add CampGrounds</a>
+        </div>
+        <div class="navbar-nav ms-auto">
+         <% if(!currentUser) {%>
+         <a class="nav-link mx-3" href="/login"><span class="material-symbols-outlined">Login</span></a>
+         <a class="nav-link mx-3" href="/register"><span class="material-symbols-outlined">person_add</span></a>
+         <% } else{ %>
+         <a class="nav-link mx-3" href="/logout"><span class="material-symbols-outlined">LogOut</span></a>
+        <% } %>
+        </div>
+      </div>
+    </div>
+  </nav>

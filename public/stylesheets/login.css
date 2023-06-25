@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Domine:wght@600&display=swap');
+
+h1 span{
+    border: 2px solid white;
+    border-radius: 50%;
+    padding: 5px 10px;
+    transform: translate(0.01em,-.65em);
+    background-color: rgb(181, 198, 235);
+}
+
+
+body{
+    height: 100vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)),url('https://images.unsplash.com/photo-1684194952323-332460c595e2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDEyM3xDRHd1d1hKQWJFd3x8ZW58MHx8fHx8&auto=format&fit=crop&w=500&q=60');
+    background-position: center;
+    background-size: cover;
+}
+
+form{
+    border: 2px solid rgb(249, 245, 245);
+    padding-bottom: 40px;
+    border-radius: 3%;
+    background-image: transparent;
+    color: rgba(2, 45, 82, 0.719);
+    width: 50%;
+    background-color: rgb(234, 221, 204);
+    box-shadow: 0px 2px 5px whitesmoke;
+}
+
+h1:after {
+    display:block;
+    content: '';
+    border-bottom: solid 3px #019fb6;  
+    transform: scaleX(0);  
+    transition: transform 250ms ease-in-out;
+}
+h1:hover:after { transform: scaleX(1); }
+h1.fromLeft:after{  transform-origin:  0% 50%; }

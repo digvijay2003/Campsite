@@ -1,0 +1,38 @@
+<% layout('layouts/login') %>
+
+<div class="container d-flex justify-content-center align-items-center mt-5">
+    <form action="/login" method="post" class="Validated-form" novalidate>
+        <div class="row">
+            <h1 class="text-center display-4"><span class="material-symbols-outlined display-4">person</span></h1>
+            <div class="col-6 offset-3">
+                <div class="mb-2">
+                    <label class="form-label" for="username">𝚄𝚜𝚎𝚛𝚗𝚊𝚖𝚎</label>
+                    <input class="form-control" type="text" id="username"  name="username" required autofocus>
+                    <%# it is for valid and invalid feedbacks that is shown to user and for this included Js Function in boilerPlate folder. %>
+                    <div class="valid-feedback">
+                        Looks good !
+                    </div>
+                    <div class="invalid-feedback">
+                        Please enter the Tittle.
+                    </div>
+                </div>
+            
+                <div class="mb-2">
+                    <label class="form-label" for="password">𝙿𝚊𝚜𝚜𝚠𝚘𝚛𝚍</label>
+                    <input class="form-control" type="password" id="password"  name="password" required>
+                    <%# it is for valid and invalid feedbacks that is shown to user and for this included Js Function in boilerPlate folder. %>
+                    <div class="valid-feedback">
+                        Looks good !
+                    </div>
+                    <div class="invalid-feedback">
+                        Please enter the Tittle.
+                    </div>
+                </div>
+                <!-- <div>
+                    <p>Don't have an account<a style="color: rgb(25, 6, 62);" href="/campgrounds/register">SignUp</a></p>
+                </div> -->
+                <button class="btn btn-success col-12 mt-3">𝕃𝕠𝕘𝕀𝕟</button>
+            </div>
+        </div>
+    </form>
+</div>

@@ -1,0 +1,105 @@
+<% layout('layouts/boilerplate') %>
+
+    <div class="row">
+        <h1 class="text-center display-5 col-6 offset-3" id="editH1">Edit Campground</h1>
+        <div class="col-6 offset-3">
+            <form action="/campgrounds/<%=campground._id%>?_method=PUT" method="post" class="Validated-form" novalidate enctype="multipart/form-data">
+                <div class="mb-2">
+                    <label class="form-label" for="tittle"><b>Tittle</b></label>
+                    <input class="form-control" type="text" id="tittle"  name="campground[tittle]"  value="<%=campground.tittle%>" required>
+
+                    <%# it is for valid and invalid feedbacks that is shown to user and for this included Js Function in boilerPlate folder. %>
+                    <div class="valid-feedback">
+                        Looks good !
+                    </div>
+                    <div class="invalid-feedback">
+                        Please enter the Tittle.
+                    </div>
+
+                </div>
+                <div class="mb-2">
+                    <label class="form-label" for="location"><b>Location</b></label>
+                    <input class="form-control" type="text" id="location" name="campground[location]"  value="<%=campground.location%>" required>
+
+                    <%# it is for valid and invalid feedbacks that is shown to user and for this included Js Function in boilerPlate folder. %>
+                    <div class="valid-feedback">
+                        Looks good !
+                    </div>
+                    <div class="invalid-feedback">
+                        Please provide Location. 
+                    </div>
+
+                </div>
+                <div class="mb-2">
+                    <label for="price"><b>Price</b></label>
+                    <div class="input-group">
+                        <span class="input-group-text" id="price-label">₹</span>
+                        <input type="text" class="form-control"  id="price" name="campground[price]" placeholder="0.0" aria-label="price" aria-describedby="price-label"  value="<%=campground.price%>" required>
+                        
+                    <%# it is for valid and invalid feedbacks that is shown to user and for this included Js Function in boilerPlate folder. %>
+                    <div class="valid-feedback">
+                        Looks good !
+                    </div>
+                    <div class="invalid-feedback">
+                        Please mention the Price. 
+                    </div>
+
+                    </div>
+                </div>
+                <div class="mb-2">
+                    <label class="form-label" for="description"><b>Description</b></label>
+                    <textarea class="form-control" id="description" name="campground[description]" cols="5" rows="2" required> <%= campground.description%></textarea>
+
+                    <%# it is for valid and invalid feedbacks that is shown to user and for this included Js Function in boilerPlate folder. %>
+                    <div class="valid-feedback">
+                        Looks good !
+                    </div>
+                    <div class="invalid-feedback">
+                        Please Enter Description.
+                    </div>
+
+                    <div class="edit-gallary p-3 mt-3">
+                        <div class="mb-2">
+                            <div class="gallary display-5 text-center text-white">
+                                𝔾𝔸𝕃𝕃𝔼ℝ𝕐
+                            </div>
+                            <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                                Please try not to Upload more than three images at once.
+                                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                            </div>
+                            <div class="mb-3">
+                                <label for="image" class="form-label text-white"><b>Upload More Images....</b></label>
+                                <input class="form-control" type="file" id="image" name="image" multiple>
+                            </div>
+                            
+                            <%# it is for valid and invalid feedbacks that is shown to user and for this included Js Function in boilerPlate folder. %>
+                            <!-- <div class="valid-feedback">
+                                Looks good !
+                            </div>
+                            <div class="invalid-feedback">
+                                Please provide image URL. 
+                            </div> -->
+                        </div>
+    
+                        <div class="mb-3 d-flex">
+                            <% campground.images.forEach(function(img,i) { %>
+    
+                                <div class="d-inline">
+                                    <img src="<%= img.thumbnail %>" class="img-thumbnail" alt="">
+                                <div class="form-inline-check">
+                                    <input type="checkbox"  id="image-<%=i%>" name="deleteImages[]" value="<%=img.filename%>">
+                                    <label for="image-<%=i%>"><button style="background-color: rgb(224, 44, 44); border-radius: 20%;color: aliceblue;">Delete?</button></label>
+                                </div>
+                                </div>
+                            <% }) %>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="mb-3">
+                    <button class="btn btn-success bg-gradient text-center col-12"><b>Update CampGround</b></button>
+                </div>
+            </form>
+        <a href="/campgrounds" class="text-center link-dark">Home Campgrounds</a>
+    </div>
+</div>

@@ -1,0 +1,49 @@
+<% layout('layouts/register') %>
+
+<div class="container d-flex justify-content-center align-items-center mt-5 pb-2">
+    <form action="/register" method="post" class="Validated-form px-3 mb-3" novalidate>
+        <div class="row mb-3">
+            <h1 class="fromLeft text-center display-4">ℂ𝕣𝕖𝕒𝕥𝕖 𝕒𝕟 𝔸𝕔𝕔𝕠𝕦𝕟𝕥</h1>
+            <div class="heading col-6 offset-3">
+                <div class="mb-1">
+                    <label class="form-label" for="username" style="font-weight: bolder;">𝚄𝚜𝚎𝚛𝚗𝚊𝚖𝚎</label>
+                    <input class="form-control border border-success" type="text" id="username"  name="username" required>
+                    <%# it is for valid and invalid feedbacks that is shown to user and for this included Js Function in boilerPlate folder. %>
+                    <div class="valid-feedback">
+                        Looks good !
+                    </div>
+                    <div class="invalid-feedback">
+                        Please enter the Tittle.
+                    </div>
+                </div>
+            
+                <div class="mb-1">
+                    <label class="form-label" for="email" style="font-weight:bolder ;">𝙴𝚗𝚝𝚎𝚛 𝚢𝚘𝚞𝚛 𝙴𝚖𝚊𝚒𝚕</label>
+                    <input class="form-control border border-success" type="text" id="email"  name="email" required>
+                    <%# it is for valid and invalid feedbacks that is shown to user and for this included Js Function in boilerPlate folder. %>
+                    <div class="valid-feedback">
+                        Looks good !
+                    </div>
+                    <div class="invalid-feedback">
+                        Please enter the Tittle.
+                    </div>
+                </div>
+            
+                <div class="mb-1">
+                    <label class="form-label" for="password" style="font-weight: bolder;">𝙿𝚊𝚜𝚜𝚠𝚘𝚛𝚍</label>
+                    <input class="form-control border border-success" type="password" id="password"  name="password" required>
+                    <%# it is for valid and invalid feedbacks that is shown to user and for this included Js Function in boilerPlate folder. %>
+                    <div class="valid-feedback">
+                        Looks good !
+                    </div>
+                    <div class="invalid-feedback">
+                        Please enter the Tittle.
+                    </div>
+                </div>
+            
+                <button class="btn btn-success col-12 mt-3">Submit</button>
+            
+            </div>
+        </div>
+    </form>
+</div>
