@@ -1,6 +1,6 @@
 # Campsite 
-Campsite is a web application that allows users to browse and reserve campsites at various locations.
-It provides a convenient platform for campers to explore different camping options and make reservations.
+Campsite is a web application that allows users to browse and addcampsites at various locations.
+It provides a convenient platform for campers to explore different camping options and add thier experience as well.
 
 ## Features ##
 - Browse available campsites with detailed information.
@@ -55,16 +55,16 @@ It provides a convenient platform for campers to explore different camping optio
 ## Contributing
 Contributions to the Campsite project are welcome! If you would like to contribute, please follow these steps:
 
-- Fork the repository.
+- **Fork** the repository.
 - Create a new branch for your feature or bug fix.
 - Implement your changes and test thoroughly.
 - Commit your changes and push to your forked repository.
 - Open a pull request, providing a detailed description of your changes.
 
 ## License
+**MIT License**
 
-
-**Contact**
+## Contact
 If you have any questions, suggestions, or feedback regarding this repository, please feel free to contact the repository owner by digupathania25@gmail.com or submitting an issue.
 
-We appreciate your interest in this repository and look forward to your contributions!# Campsite
+**I would appreciate your interest in this repository and look forward to your contributions!# Campsite.**
