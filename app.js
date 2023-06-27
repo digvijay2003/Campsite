@@ -154,7 +154,7 @@ app.use((req,res,next) =>{
     next();
 })
 
-
+app.get('/favicon.ico', (req, res) => res.status(204));
 app.use('/',userRoutes);
 app.use('/campgrounds',campgroundRoutes)
 app.use('/campgrounds/:id/reviews',reviewsRoutes)
