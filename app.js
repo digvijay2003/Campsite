@@ -2,7 +2,7 @@ if(process.env.NODE_ENV !== "production"){
     require('dotenv').config();
 }
 
-// const dbUrl = process.env.DB_URL;
+const dbUrl = process.env.DB_URL;
 
 console.log(process.env.SECRET);
 console.log(process.env.API_KEY);
@@ -28,8 +28,7 @@ const campgroundRoutes = require('./routes/campground');
 const reviewsRoutes = require('./routes/reviews');
 // const { isLoggedIn } = require('./middleware');
 
-const dbUrl = 'mongodb://127.0.0.1:27017/yelp-camp';
-mongoose.connect(dbUrl,{
+mongoose.connect(dbUrl || 'mongodb://127.0.0.1:27017/yelp-camp',{
     // useNewUrlParser: true,
     // useCreateIndex: true,
     // useUnifiedTopology: true
