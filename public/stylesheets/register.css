@@ -9,7 +9,7 @@ body{
 
 h1{
     font-family: 'Acme', sans-serif;
-    color: rgba(197, 240, 247, 0.393);
+    color:white;
 }
 
 h1:after {
@@ -23,7 +23,7 @@ h1:hover:after { transform: scaleX(1); }
 h1.fromLeft:after{  transform-origin:  0% 50%; }
 
 form {
-    color: rgba(197, 240, 247, 0.393);
+    color: white;
     border-bottom: solid 3px #11bfeb;  
     transform: scaleX(0);  
     transition: transform 400ms ease-in-out;
