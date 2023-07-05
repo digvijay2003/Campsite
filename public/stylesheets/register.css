@@ -3,7 +3,7 @@
 
 body{
     background: rgb(0,0,0);
-    background: linear-gradient(340deg, rgba(0,0,0,0.9192927170868347) 27%, rgba(255,255,255,1) 28%, rgba(198,153,118,0.9052871148459384) 72%); 
+    background-image: linear-gradient(to right top, #cfbed9, #f1c2d2, #ffcbbf, #ffdeb1, #e3f5ba); 
     background-size: cover;
 }
 
