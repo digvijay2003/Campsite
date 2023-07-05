@@ -9,13 +9,13 @@ body{
 
 h1{
     font-family: 'Acme', sans-serif;
-    color: rgba(134, 18, 142, 0.393);
+    color: rgba(197, 240, 247, 0.393);
 }
 
 h1:after {
     display:block;
     content: '';
-    border-bottom: solid 3px #11bfeb;  
+    border-bottom: solid 5px #48035b;  
     transform: scaleX(0);  
     transition: transform 400ms ease-in-out;
 }
@@ -23,15 +23,12 @@ h1:hover:after { transform: scaleX(1); }
 h1.fromLeft:after{  transform-origin:  0% 50%; }
 
 form {
-    color: rgba(134, 18, 142, 0.393);
+    color: rgba(197, 240, 247, 0.393);
     border-bottom: solid 3px #11bfeb;  
     transform: scaleX(0);  
     transition: transform 400ms ease-in-out;
 }
 
-.container form:hover{
-    box-shadow: 0px 19px 35px rgb(246, 235, 244);
-}
 
 .heading{
     padding: 10px;
